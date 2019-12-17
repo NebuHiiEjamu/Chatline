@@ -22,8 +22,8 @@ namespace UserStatus
 class Session : public std::enable_shared_from_this<Session>
 {
 public:
-	Session(uint32, CLConnectionPtr);
-	uint32 getId() const;
+	Session(uint16, CLConnectionPtr);
+	uint16 getId() const;
 	uint16 getIcon();
 	std::string&& getClientInfoText();
 	std::string&& getVersionString() const;
@@ -37,8 +37,8 @@ private:
 	std::mutex mutex;
 	std::bitset<UserStatus::all> status;
 	std::array<uint32, 5> last5ChatTimes;
-	uint32 id;
 	uint32 version;
+	uint16 id;
 	uint16 icon;
 };
 

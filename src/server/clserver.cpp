@@ -17,7 +17,7 @@ CLServer::CLServer():
 {
 }
 
-bool CLServer::createSession(uint32 id, CLConnectionPtr connection)
+bool CLServer::createSession(uint16 id, CLConnectionPtr connection)
 {
 	LockGuard lock(mutex);
 	SessionPtr newSession(new Session(id, connection));
@@ -30,12 +30,12 @@ bool CLServer::createSession(uint32 id, CLConnectionPtr connection)
 	return true;
 }
 
-void CLServer::removeSession(uint32 id)
+void CLServer::removeSession(uint16 id)
 {
 	sessionMap.erase(id);
 }
 
-uint32 CLServer::getNextUserId()
+uint16 CLServer::getNextUserId()
 {
 	LockGuard lock(mutex);
 	return nextUserId++;
@@ -61,7 +61,7 @@ std::string_view& CLServer::getDescription() const
 	return description;
 }
 
-uint32 CLServer::getUserCount()
+uint16 CLServer::getUserCount()
 {
 	LockGuard lock(mutex);
 	return static_cast<uint16>(sessionMap.size());

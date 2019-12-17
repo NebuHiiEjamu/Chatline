@@ -23,8 +23,8 @@ public:
 	static CLServerRef getInstance();
 
 	~CLServer();
-	bool createSession(suint32, CLConnectionPtr);
-	void removeSession(uint32);
+	bool createSession(uint16, CLConnectionPtr);
+	void removeSession(uint16);
 	uint16 getNextUserId();
 	uint16 getUserCount();
 	uint16 getPort() const;
@@ -40,15 +40,14 @@ private:
 
 	std::string name;
 	std::string description;
-	std::string agreement;
-	std::map<uint32, SessionPtr> sessionMap;
+	std::map<uint16, SessionPtr> sessionMap;
 	std::set<TrackerConnectionPtr> trackerConnections;
 	std::map<std::string_view, AccountPtr> accountMap;
 	std::set<std::pair<Address, Timestamp>> bans;
 	sqlite3 *db;
 	std::mutex mutex;
 	Timestamp uptime;
-	suint32 nextUserId;
+	suint16 nextUserId;
 	uint16 icon;
 	uint16 port;
 };

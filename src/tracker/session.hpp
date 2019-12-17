@@ -19,7 +19,7 @@ private:
 	std::mutex mutex;
 	Timestamp uptime;
 	uint32 id;
-	uint32 users;
+	uint16 users;
 	uint16 port;
 	uint16 icon;
 };

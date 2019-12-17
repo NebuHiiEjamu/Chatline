@@ -2,13 +2,13 @@
 #include "trackerconnection.hpp"
 #include "tracker.hpp"
 
-Session::Session(uint32 id, TrackerConnectionPtr connection):
+Session::Session(uint16 id, TrackerConnectionPtr connection):
 	connection(connection),
 	id(id)
 {
 }
 
-uint32 Session::getId() const
+uint16 Session::getId() const
 {
 	return id;
 }

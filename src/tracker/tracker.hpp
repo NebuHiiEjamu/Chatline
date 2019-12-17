@@ -23,7 +23,7 @@ public:
 	static TrackerRef getInstance();
 
 	~Tracker();
-	bool createSession(suint32, TrackerConnectionPtr);
+	bool createSession(uint32, TrackerConnectionPtr);
 	void removeSession(uint32);
 	uint32 getNextServerId();
 	uint16 getPort() const;
