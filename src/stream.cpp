@@ -10,5 +10,5 @@ template <class String> CLOutStream::write(const std::string_view &id, const Str
 	internal << fmt::format("{:0>3}", std::to_string(id.size()).size();
 	internal << fmt::format("{:0>3}", std::to_string(data.size()).size();
 	internal << id.size() << data.size() << id;
-	internal.write(reinterpret_cast<const Byte*>(data.data())
+	internal.write(reinterpret_cast<const Byte*>(data.data()), data.size());
 }
