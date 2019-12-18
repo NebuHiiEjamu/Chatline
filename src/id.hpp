@@ -3,6 +3,7 @@
 
 #include <map>
 #include <string_view>
+
 #include "common/src/typedefs.hpp"
 
 enum class Id : Byte
