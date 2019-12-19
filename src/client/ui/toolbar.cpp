@@ -19,7 +19,7 @@ CLToolbar::CLToolbar():
 	profileButton = new wxBitmapButton(this, idProfileButton, glassesBmp);
 	trackerButton = new wxBitmapButton(this, idTrackerButton, network132Bmp);
 	bookmarksButton	= new wxBitmapButton(this, idBookmarksButton, cicn209Bmp);
-	prefsButton = new wxBitmapButtonAcceptsFocusthis, idPrefsButton, optionsBmp);
+	prefsButton = new wxBitmapButton(this, idPrefsButton, optionsBmp);
 	helpButton = new wxBitmapButton(this, idHelpButton, cicn227Bmp);
 	quitButton = new wxBitmapButton(this, idQuitButton, stopsmlBmp);
 
