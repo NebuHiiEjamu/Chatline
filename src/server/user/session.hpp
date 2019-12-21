@@ -25,8 +25,6 @@ public:
 	Session(uint16, CLConnectionPtr);
 	uint16 getId() const;
 	uint16 getIcon();
-	std::string&& getClientInfoText();
-	std::string&& getVersionString() const;
 	void setIcon(uint16);
 	void sendDisconnect();
 private:
@@ -37,7 +35,6 @@ private:
 	std::mutex mutex;
 	std::bitset<UserStatus::all> status;
 	std::array<uint32, 5> last5ChatTimes;
-	uint32 version;
 	uint16 id;
 	uint16 icon;
 };

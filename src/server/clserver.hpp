@@ -18,9 +18,11 @@ class CLServer : public Server
 {
 public:
 	static constexpr uint16 defaultPort = 7210;
+	static constexpr uint16 filePort = 7230;
 	
 	static constexpr std::string_view getDefaultDatabase();
 	static CLServerRef getInstance();
+	static std::string&& getVersion();
 
 	~CLServer();
 	bool createSession(uint16, CLConnectionPtr);

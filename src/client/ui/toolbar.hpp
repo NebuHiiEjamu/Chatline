@@ -3,31 +3,25 @@
 
 #include <wx/wx.h>
 
-#include "bitmaps.hpp"
-
 class CLToolbar : public wxFrame
 {
 public:
-	enum
-	{
-		idConnectButton = 1,
-		idFilesButton,
-		idUsersButton,
-		idChatButton,
-		idBroadcastButton,
-		idNewsButton,
-		idServerInfoButton,
-		idTransfersButton,
-		idProfileButton,
-		idTrackerButton,
-		idBookmarksButton,
-		idPrefsButton,
-		idHelpButton,
-		idQuitButton
-	};
-
 	CLToolbar();
 	~CLToolbar();
+
+	void onConnectButton(wxCommandEvent&);
+	void onFilesButton(wxCommandEvent&);
+	void onUsersButton(wxCommandEvent&);
+	void onChatButton(wxCommandEvent&);
+	void onBroadcastButton(wxCommandEvent&);
+	void onNewsButton(wxCommandEvent&);
+	void onServerInfoButton(wxCommandEvent&);
+	void onTransfersButton(wxCommandEvent&);
+	void onProfileButton(wxCommandEvent&);
+	void onTrackerButton(wxCommandEvent&);
+	void onBookmarksButton(wxCommandEvent&);
+	void onPrefsButton(wxCommandEvent&);
+	void onQuitButton(wxCommandEvent&);
 private:
 	wxBitmapButton *connectButton;
 	wxBitmapButton *filesButton;
@@ -41,7 +35,6 @@ private:
 	wxBitmapButton *trackerButton;
 	wxBitmapButton *bookmarksButton;
 	wxBitmapButton *prefsButton;
-	wxBitmapButton *helpButton;
 	wxBitmapButton *quitButton;
 
 	wxDECLARE_EVENT_TABLE();

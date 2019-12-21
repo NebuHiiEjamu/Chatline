@@ -11,7 +11,6 @@
 #include "../icon/cicn205.xpm"
 #include "../icon/cicn209.xpm"
 #include "../icon/cicn219.xpm"
-#include "../icon/cicn227.xpm"
 #include "../icon/cicn236.xpm"
 #include "../icon/cicn237.xpm"
 #include "../icon/cicn238.xpm"
@@ -43,7 +42,6 @@ static const wxBitmap cicn204Bmp(cicn204_xpm);
 static const wxBitmap cicn205Bmp(cicn205_xpm);
 static const wxBitmap cicn209Bmp(cicn209_xpm);
 static const wxBitmap cicn219Bmp(cicn219_xpm);
-static const wxBitmap cicn227Bmp(cicn227_xpm);
 static const wxBitmap cicn236Bmp(cicn236_xpm);
 static const wxBitmap cicn237Bmp(cicn237_xpm);
 static const wxBitmap cicn238Bmp(cicn238_xpm);

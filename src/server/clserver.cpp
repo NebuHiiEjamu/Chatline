@@ -5,11 +5,17 @@
 #include "../common/src/hive.hpp"
 #include "user/clconnection.hpp"
 #include "user/session.hpp"
+#include "../gitversion.hpp"
 
 std::shared_ptr<CLServer> CLServer::instance = std::make_shared<CLServer>();
 
 constexpr std::string_view CLServer::getDefaultDatabase()
 {
+}
+
+std::string&& CLServer::getVersion()
+{
+	return fmt::format("Chatline Server v1.2-{}", gitVersion);
 }
 
 CLServer::CLServer():

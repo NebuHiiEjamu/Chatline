@@ -5,6 +5,7 @@ CMakeFiles/*
 CMakeCache.txt
 Debug/*
 etc/*
+gitversion.hpp
 lib/*
 Makefile
 Release/*

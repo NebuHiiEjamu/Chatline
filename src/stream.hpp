@@ -10,10 +10,15 @@ class CLInStream : public InStream
 public:
 };
 
-class CLOutStream : public InStream
+class CLOutStream : public OutStream
 {
 public:
-	template <class String> write(const std::string_view&, const String&);
+	template <class T> void write(T);
+	void write(const std::string_view&, const Buffer&);
+	template <class String> void writePString(const String&);
+	template <class String> void writeSPString(const String&);
+	void writeTrueFalse(bool);
+	void writeYN(bool);
 };
 
 #endif // _CLSTREAM_H
