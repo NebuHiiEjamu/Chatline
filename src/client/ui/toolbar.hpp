@@ -7,7 +7,6 @@ class CLToolbar : public wxFrame
 {
 public:
 	CLToolbar();
-	~CLToolbar();
 
 	void onConnectButton(wxCommandEvent&);
 	void onFilesButton(wxCommandEvent&);
@@ -23,19 +22,10 @@ public:
 	void onPrefsButton(wxCommandEvent&);
 	void onQuitButton(wxCommandEvent&);
 private:
-	wxBitmapButton *connectButton;
 	wxBitmapButton *filesButton;
-	wxBitmapButton *usersButton;
-	wxBitmapButton *chatButton;
 	wxBitmapButton *broadcastButton;
 	wxBitmapButton *newsButton;
 	wxBitmapButton *serverInfoButton;
-	wxBitmapButton *transfersButton;
-	wxBitmapButton *profileButton;
-	wxBitmapButton *trackerButton;
-	wxBitmapButton *bookmarksButton;
-	wxBitmapButton *prefsButton;
-	wxBitmapButton *quitButton;
 
 	wxDECLARE_EVENT_TABLE();
 };

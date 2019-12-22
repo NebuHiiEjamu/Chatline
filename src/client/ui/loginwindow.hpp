@@ -7,9 +7,12 @@ class LoginWindow : public wxFrame
 {
 public:
 	LoginWindow();
-	~LoginWindow();
-private:
+
 	void onConnectButton(wxCommandEvent&);
+private:
+	wxTextCtrl *addressField;
+	wxTextCtrl *loginField;
+	wxTextCtrl *passwordField;
 	
 	wxDECLARE_EVENT_TABLE();
 };
