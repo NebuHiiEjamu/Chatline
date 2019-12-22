@@ -5,6 +5,8 @@ include(${wxWidgets_USE_FILE})
 
 set(SOURCE_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
 	../common/src/stream.cpp
+	../file/fileconnection.cpp
+	../file/filesession.cpp
 	../stream.cpp
 	ui/loginwindow.cpp
 	ui/toolbar.cpp

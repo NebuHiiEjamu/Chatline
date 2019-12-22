@@ -5,8 +5,8 @@
 
 #include "forward.hpp"
 #include "../user/forward.hpp"
-#include "../../common/src/forward.hpp"
-#include "../../common/src/typedefs.hpp"
+#include "../common/src/forward.hpp"
+#include "../common/src/typedefs.hpp"
 
 class FileSession : public std::enable_shared_from_this<FileSession>
 {

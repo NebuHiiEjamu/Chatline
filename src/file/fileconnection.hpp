@@ -2,8 +2,8 @@
 #define _FILECONNECTION_H
 
 #include "forward.hpp"
-#include "../../common/src/forward.hpp"
-#include "../../common/src/connection.hpp"
+#include "../common/src/forward.hpp"
+#include "../common/src/connection.hpp"
 
 class FileConnection : public Connection<boost::asio::ip::tcp>
 {

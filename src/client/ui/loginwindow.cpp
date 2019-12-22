@@ -1,5 +1,4 @@
 #include "loginwindow.hpp"
-#include "../id.hpp"
 
 wxBEGIN_EVENT_TABLE(LoginWindow, wxFrame)
 	EVT_BUTTON(wxID_OK, LoginWindow::onConnectButton)

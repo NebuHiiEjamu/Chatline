@@ -14,7 +14,7 @@ enum
 	idProfile,
 	idTracker,
 	idBookmarks,
-	idHelp
+	idChatHistory
 };
 
 #endif // _CLIENT_ID_H
