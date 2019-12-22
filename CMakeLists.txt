@@ -1,6 +1,7 @@
 project(Chatline)
 
 find_package(Boost 1.71.0 REQUIRED)
+find_package(OpenSSL REQUIRED Crypto)
 
 if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
 	find_package(Git)

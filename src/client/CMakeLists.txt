@@ -14,4 +14,4 @@ set(SOURCE_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 add_executable(ChatlineClient ${SOURCE_FILES})
-target_link_libraries(ChatlineClient ${wxWidgets_LIBRARIES})
+target_link_libraries(ChatlineClient ${wxWidgets_LIBRARIES} ${OPENSSL_CRYPTO_LIBRARIES})
