@@ -96,7 +96,7 @@ enum class Id : Byte
 	zero
 };
 
-constexpr std::pair<Id, std::string_view> idMap[] = {
+static constexpr std::pair<Id, std::string_view> idMap[] = {
 	{ Id::acceptIMs, "acceptims" },
 	{ Id::acceptPChats, "acceptpchats" },
 	{ Id::addMyServer, "addmyserver" },

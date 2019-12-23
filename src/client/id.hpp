@@ -9,12 +9,17 @@ enum
 	idChat,
 	idBroadcast,
 	idNews,
-	idServerInfo,
+	idInfo,
 	idTransfers,
 	idProfile,
 	idTracker,
 	idBookmarks,
-	idChatHistory
+	idChatHistory,
+	idUserList,
+	idMessage,
+	idPrivateChat,
+	idKick,
+	idGo
 };
 
 #endif // _CLIENT_ID_H

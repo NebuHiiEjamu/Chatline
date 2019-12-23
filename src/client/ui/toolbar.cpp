@@ -9,7 +9,7 @@ wxBEGIN_EVENT_TABLE(CLToolbar, wxFrame)
 	EVT_BUTTON(idChat, CLToolbar::onChatButton)
 	EVT_BUTTON(idBroadcast, CLToolbar::onBroadcastButton)
 	EVT_BUTTON(idNews, CLToolbar::onNewsButton)
-	EVT_BUTTON(idServerInfo, CLToolbar::onServerInfoButton)
+	EVT_BUTTON(idInfo, CLToolbar::onServerInfoButton)
 	EVT_BUTTON(idTransfers, CLToolbar::onTransfersButton)
 	EVT_BUTTON(idProfile, CLToolbar::onProfileButton)
 	EVT_BUTTON(idTracker, CLToolbar::onTrackerButton)
@@ -28,7 +28,7 @@ CLToolbar::CLToolbar():
 	wxBitmapButton *chatButton = new wxBitmapButton(this, idChat, chatbuttonBmp);
 	broadcastButton = new wxBitmapButton(this, idBroadcast, broadcastbuttonBmp);
 	newsButton = new wxBitmapButton(this, idNews, newsBmp);
-	serverInfoButton = new wxBitmapButton(this, idServerInfo, infoBmp);
+	serverInfoButton = new wxBitmapButton(this, idInfo, infoBmp);
 	wxBitmapButton *transfersButton = new wxBitmapButton(this, idTransfers, network224Bmp);
 	wxBitmapButton *profileButton = new wxBitmapButton(this, idProfile, glassesBmp);
 	wxBitmapButton *trackerButton = new wxBitmapButton(this, idTracker, network132Bmp);

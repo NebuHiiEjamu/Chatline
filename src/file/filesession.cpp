@@ -2,7 +2,7 @@
 
 #include "filesession.hpp"
 
-constexpr std::string_view FileSession::getPlatform()
+constexpr std::string_view FileSession::getMyPlatform()
 {
 #if BOOST_OS_MACOS
 	return "Mac";

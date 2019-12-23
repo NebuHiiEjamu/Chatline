@@ -1,8 +1,8 @@
 #include "clconnection.hpp"
-#include "stream.hpp"
+#include "../stream.hpp"
 
-CLConnection::CLConnection(HiveRef hive):
-	Connection(hive)
+CLConnection::CLConnection():
+	Connection(nullptr)
 {
 }
 
