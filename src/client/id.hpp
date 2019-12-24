@@ -19,7 +19,9 @@ enum
 	idMessage,
 	idPrivateChat,
 	idKick,
-	idGo
+	idGo,
+	idDownload,
+	idUpload
 };
 
 #endif // _CLIENT_ID_H

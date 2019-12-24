@@ -21,4 +21,5 @@ Changes
 - Server banners discontinued, as I feel they're pointless. Server ignores 1.0/1.1 client requests for banners.
 - Client: help button on toolbar dropped, as the tips window could easily have been a text file instead
 - Client: user profile now automatically use host device info, instead of being filled in by user
+- Client: file browser now has a tree structure
 - Prereleases: version info now uses Git revision instead of old Mac OS X-style build numbers

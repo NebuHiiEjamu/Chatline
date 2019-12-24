@@ -14,7 +14,7 @@ TransfersWindow::TransfersWindow(): wxFrame(nullptr, wxID_ANY, wxT("Transfer Man
 	toolbar->AddTool(wxID_OPEN, wxEmptyString, cicn240Bmp);
 
 	wxBoxSizer *sizer = new wxBoxSizer(wxVERTICAL);
-	sider->Add(serverList, 0, wxEXPAND);
+	sider->Add(scrollPane, 0, wxEXPAND);
 
 	SetSizerAndFit(sizer);
 	SetSizeHints(this);
