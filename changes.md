@@ -15,6 +15,7 @@ What's New
 - Server/Tracker: now CLI only
 - Server: can now export version 1.1 legacy user data and news
 - Tracker: can now export version 1.1 legacy passwords
+
 Changes
 -------
 - PICT support dropped, as it is outdated, proprietary and Mac-centric.

@@ -9,7 +9,7 @@ TrackerWindow::TrackerWindow(): wxFrame(nullptr, wxID_ANY, wxT("Tracker"))
 	addressField = new wxTextCtrl(this, wxID_ANY, wxEmptyString, wxDefaultPosition,
 		wxDefaultSize, wxTE_PROCESS_ENTER | wxTE_LEFT);
 
-	serverList = new wxListView(this, idUserList, wxDefaultPosition, wxDefaultSize,
+	serverList = new wxListView(this, idServerList, wxDefaultPosition, wxDefaultSize,
 		wxLC_REPORT | wxLC_SMALL_ICON | wxLC_ALIGN_LEFT | wxLC_SINGLE_SEL);
 	userList->InsertColumn(0, wxT("Name"))
 	userList->InsertColumn(1, wxT("Users"));

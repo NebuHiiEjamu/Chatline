@@ -1,41 +1,41 @@
-#include "clconnection.hpp"
-#include "session.hpp"
+#include "fileconnection.hpp"
+#include "filesession.hpp"
 #include "../../common/src/hive.hpp"
 #include "../../common/src/listener.hpp"
 #include "../server.hpp"
 
-CLConnection::CLConnection(HivePtr hive, AcceptorPtr acceptor):
+FileConnection::FileConnection(HivePtr hive, AcceptorPtr acceptor):
 	Connection(hive),
 	acceptor(acceptor)
 {
 }
 
-void CLConnection::setSession(SessionRef session)
+void FileConnection::setSession(SessionRef session)
 {
 	this->session = session;
 }
 
-void CLConnection::onAccept(const std::string_view&, uint16)
+void FileConnection::onAccept(const std::string_view&, uint16)
 {
-	CLConnectionPtr connection(new CLConnection(hive, acceptor));
+	FileConnectionPtr connection(new FileConnection(hive, acceptor));
 	acceptor->accept(connection);
 
-	CLServer::getInstance()->createSession(id, std::dynamic_pointer_cast<CLConnection>
+	CLServer::getInstance()->createSession(id, std::dynamic_pointer_cast<FileConnection>
 		shared_from_this()));
 }
 
-void CLConnection::onSend(const Buffer&)
+void FileConnection::onSend(const Buffer&)
 {
 }
 
-void CLConnection::onReceive(Buffer &buffer)
+void FileConnection::onReceive(Buffer &buffer)
 {	
 }
 
-void CLConnection::onError(Error)
+void FileConnection::onError(Error)
 {
 }
 
-void CLConnection::onDisconnect()
+void FileConnection::onDisconnect()
 {
 }

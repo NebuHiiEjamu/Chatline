@@ -1,43 +1,55 @@
 #include <boost/endian/conversion.hpp>
+#include <boost/predef.h>
 #include <fmt/core.h>
-#include <string>
+#include <sstream>
 
 #include "id.hpp"
 #include "stream.hpp"
 
+using namespace std::literals;
+
 template <class T> void CLOutStream::write(T t)
 {
-	boost::endian::native_to_big_inplace(t);
-	internal.write(reinterpret_cast<const Byte*>(&t), sizeof(T));
+#if BOOST_ENDIAN_BIG_BYTE
+	write(t, true);
+#else
+	write(t, false);
+#endif
 }
 
-void CLOutStream::write(const std::string_view &id, const Buffer &data)
+void CLOutStream::write(const std::string_view &id, const ByteString &payload)
 {
-	internal.put(252);
-	internal << fmt::format("{:0>3}", std::to_string(id.size()).size();
-	internal << fmt::format("{:0>3}", std::to_string(data.in_avail()).size();
-	internal << id.size() << data.in_avail() << id << data;
+	std::ostringstream result;
+	write8(252);
+	result << fmt::format("{:0>3}", std::to_string(id.size()).size();
+	result << fmt::format("{:0>3}", std::to_string(payload.size()).size();
+	result << id.size() << payload.size() << id;
+	writeString(result.str());
+	writeString(payload);
 }
 
 template <class String> void CLOutStream::writePString(const String &s)
 {
-	internal.put(static_cast<Byte>(s.size()));
-	internal << s;
+	write8(static_cast<Byte>(s.size()));
+	writeString(s);
 }
 
 template <class String> void CLOutStream::writeSPString(const String &s)
 {
-	uint16 size = boost::endian::native_to_big(static_cast<uint16>(s.size()));
-	internal.write(reinterpret_cast<const Byte*>(&size));
-	internal << s;
+#if BOOST_ENDIAN_BIG_BYTE
+	write16(static_cast<uint16>(s.size()), true);
+#else
+	write16(static_cast<uint16>(s.size()), false);
+#endif
+	writeString(s);
 }
 
 void CLOutStream::writeTrueFalse(bool b)
 {
-	internal << (b ? "true" : "false" );
+	writeString(b ? "true"sv : "false"sv);
 }
 
 void CLOutStream::writeYN(bool b)
 {
-	internal << (b ? 'y' : 'n' );
+	write8(b ? 'y' : 'n');
 }

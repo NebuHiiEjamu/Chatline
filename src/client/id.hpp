@@ -16,6 +16,7 @@ enum
 	idBookmarks,
 	idChatHistory,
 	idUserList,
+	idServerList,
 	idMessage,
 	idPrivateChat,
 	idKick,

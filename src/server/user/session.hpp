@@ -36,7 +36,7 @@ private:
 	std::bitset<UserStatus::all> status;
 	std::array<uint32, 5> last5ChatTimes;
 	uint16 id;
-	uint16 icon;
+	[[deprecated("Superseded by custom icon")]] uint16 icon;
 };
 
 #endif // _SESSION_H

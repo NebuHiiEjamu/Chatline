@@ -1,7 +1,6 @@
 #ifndef _ID_H
 #define _ID_H
 
-#include <string_view>
 #include <utility>
 
 #include "common/src/typedefs.hpp"
@@ -96,7 +95,7 @@ enum class Id : Byte
 	zero
 };
 
-static constexpr std::pair<Id, std::string_view> idMap[] = {
+static const std::pair<Id, const char*> idMap[] = {
 	{ Id::acceptIMs, "acceptims" },
 	{ Id::acceptPChats, "acceptpchats" },
 	{ Id::addMyServer, "addmyserver" },

@@ -13,7 +13,7 @@ constexpr std::string_view FileSession::getMyPlatform()
 	return "";
 }
 
-FileSession::FileSession(uint16 id, TrackerConnectionPtr connection):
+FileSession::FileSession(uint16 id, FileConnectionPtr connection):
 	connection(connection)
 {
 }
